@@ -10,5 +10,6 @@ namespace ORMNothwind.DataAccess.Abstract
     public interface IProductDal : IORMRepository<Products>
     {
         // nothing to implement yet
+        string GetProductNameById(int id);
     }
 }

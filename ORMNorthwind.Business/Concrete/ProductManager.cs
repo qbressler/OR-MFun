@@ -22,5 +22,10 @@ namespace ORMNorthwind.Business.Concrete
         {
             return _productDal.GetList(p => p.Discontinued == false);
         }
+
+        public string GetProductNameById(int id)
+        {
+            return _productDal.GetProductNameById(id);
+        }
     }
 }
