@@ -12,6 +12,8 @@ namespace ORMNothwind.DataAccess.Abstract
     {
         T Get(Expression<Func<T, bool>> filter);
 
+        List<T> Get();
+
         List<T> GetList(Expression<Func<T, bool>> filter);
     }
 }

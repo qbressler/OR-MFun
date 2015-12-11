@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace ORMNothwind.DataAccess.Abstract
 {
-    public interface IProductDal : IORMRepository<Products>
+    public interface ICategoryDal : IORMRepository<Categories>
     {
-        string GetProductNameById(int id);
+
     }
 }

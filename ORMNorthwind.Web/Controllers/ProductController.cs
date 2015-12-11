@@ -20,6 +20,7 @@ namespace ORMNorthwind.Web.Controllers
 
         public ActionResult Index()
         {
+            string productNameTest = _service.GetProductNameById(4);
             List<Products> products = _service.GetAllProducts();
             return View(products);
         }

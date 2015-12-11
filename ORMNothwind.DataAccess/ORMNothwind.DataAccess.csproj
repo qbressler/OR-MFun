@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\ICategoryDal.cs" />
     <Compile Include="Abstract\IORMRepository.cs" />
     <Compile Include="Abstract\IProductDal.cs" />
+    <Compile Include="Concrete\CategoryDal.cs" />
     <Compile Include="Concrete\ORM\Contexts\NorthwindContext.cs" />
     <Compile Include="Concrete\ORM\ORMBase.cs" />
     <Compile Include="Concrete\ProductDal.cs" />

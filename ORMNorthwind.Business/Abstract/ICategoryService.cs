@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ORMNothwind.DataAccess.Abstract
+namespace ORMNorthwind.Business.Abstract
 {
-    public interface IProductDal : IORMRepository<Products>
+    public interface ICategoryService 
     {
-        string GetProductNameById(int id);
+        List<Categories> GetCategories();
     }
 }

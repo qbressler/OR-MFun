@@ -21,6 +21,9 @@ namespace ORMNorthwind.Web.DependencyResolver
             _kernel = new StandardKernel();
             _kernel.Bind<IProductService>().To<ProductManager>().InSingletonScope();
             _kernel.Bind<IProductDal>().To<ProductDal>().InSingletonScope();
+
+            _kernel.Bind<ICategoryService>().To<CategoryManager>().InSingletonScope();
+            _kernel.Bind<ICategoryDal>().To<CategoryDal>().InSingletonScope();
         }
 
         protected override IController GetControllerInstance(RequestContext requestContext, Type controllerType)

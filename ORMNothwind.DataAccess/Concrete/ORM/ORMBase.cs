@@ -22,11 +22,28 @@ namespace ORMNothwind.DataAccess.Concrete.ORM
             }
         }
 
+        public List<TEntity> Get()
+        {
+            using (var context = new TContext())
+            {
+                return context.From<TEntity>().ToList();
+            }
+        }
+
+
         public List<TEntity> GetList(Expression<Func<TEntity, bool>> filter)
         {
             using (var context = new TContext())
             {
                 return context.From<TEntity>().Where(filter).ToList();
+            }
+        }
+
+        public List<TEntity> GetList()
+        {
+            using (var context = new TContext())
+            {
+                return context.From<TEntity>().ToList();
             }
         }
     }
